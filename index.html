@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HTML Attributes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header id="navbar-header">HTML Attributes</header>
+    <ul id="navbar-ul">
+      <li><a href="#Overview" class="nav-link">Overview</a></li>
+      <li><a href="#The_href_Attribute" class="nav-link">The href Attribute</a></li>
+      <li><a href="#The_src_Attribute" class="nav-link">The src Attribute</a></li>
+      <li><a href="#The_width_and_height_Attributes" class="nav-link">The width and height Attributes</a></li>
+      <li><a href="#The_alt_Attribute" class="nav-link">The alt Attribute</a></li>
+      <li><a href="#The_style_Attribute" class="nav-link">The style Attribute</a></li>
+      <li><a href="#The_lang_Attribute" class="nav-link">The lang Attribute</a></li>
+      <li><a href="#The_title_Attribute" class="nav-link">The title Attribute</a></li>
+      <li><a href="#We_Suggest:_Always_Use_Lowercase_Attributes" class="nav-link">We Suggest: Always Use Lowercase Attributes</a></li>
+      <li><a href="#We_Suggest:_Always_Quote_Attribute_Values" class="nav-link">We Suggest: Always Quote Attribute Values</a></li>
+      <li><a href="#Single_or_Double_Quotes?" class="nav-link">Single or Double Quotes?</a></li>
+
+      <li><a href="#Chapter_Summary" class="nav-link">Chapter Summary</a></li>
+
+      <li><a href="#Reference" class="nav-link">Reference</a></li>
+    </ul>
+  </nav>
+  
+  <main id="main-doc"> <!-- Page Content -->
+    <section class="main-section" id="Overview">
+      <header>Overview</header>
+      <p>HTML attributes provide additional information about HTML elements.</p>
+      <ul>
+        <li><em>All</em> HTML elements can have <strong>attributes</strong></li>
+        <li>Attributes provide <strong>additional information</strong> about elements</li>
+        <li>Attributes are <em>always</em> specified in <strong>the start tag</strong></li>
+        <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong></li>
+      </ul>
+    </section>
+    
+    <section class="main-section" id="The_href_Attribute">
+      <header>The href Attribute</header>
+      <p>The <code class="code-snippet">&lt;a&gt;</code> tag defines a hyperlink. The <code class="code-snippet">href</code> attribute specifies the URL of the page the link goes to:</p>
+      <h6>Example:</h6>
+      <code class="code-example">&lt;a href="https://www.w3schools.com">Visit W3Schools&gt;&lt;/a&gt;</code>
+    </section>
+    
+    <section class="main-section" id="The_src_Attribute">
+      <header>The src Attribute</header>
+      <p>The <code class="code-snippet">&lt;img&gt;</code> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+      <h6>Example:</h6>
+      <code class="code-example">&lt;img src="img_girl.jpg"&gt;</code>
+      <p>There are two ways to specify the URL in the <code class="code-snippet">src</code> attribute:</p>
+      <ol>
+         <li><strong>Absolute URL</strong> - Links to an external image that is hosted on another website. Example: <code class="code-snippet">src="https://www.w3schools.com/images/img_girl.jpg"</code>.</li>
+         <p><strong>Notes:</strong> External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.</p>
+         <li><strong>Relative URL</strong> - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: <code class="code-snippet">src="img_girl.jpg"</code>. If the URL begins with a slash, it will be relative to the domain. Example: <code class="code-snippet">src="/images/img_girl.jpg"</code>.</li>
+         <p><strong>Tip:</strong> It is almost always best to use relative URLs. They will not break if you change domain.</p>
+       </ol>
+    </section>
+    
+    <section class="main-section" id="The_width_and_height_Attributes">
+      <header>The width and height Attributes</header>
+      <p>The <code class="code-snippet">&lt;img&gt;</code> tag should also contain the <code class="code-snippet">width</code> and <code class="code-snippet">height</code> attributes, which specify the width and height of the image (in pixels):</p>
+      <h6>Example: </h6>
+      <code class="code-example">&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code>
+    </section>
+    
+    <section class="main-section" id="The_alt_Attribute">
+      <header>The alt Attribute</header>
+      <p>The required <code class="code-snippet">alt</code> attribute for the <code class="code-snippet">&lt;img&gt;</code> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <code class="code-snippet">src</code> attribute, or if the user uses a screen reader.</p>
+      <h6>Example: </h6>
+      <code class="code-example">&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code>
+      <h6>Example: </h6>
+      <p>See what happens if we try to display an image that does not exist:</p>
+       <code class="code-example">&lt;img src="img_typo.jpg" alt="Girl with a jacket"&gt;</code>
+    </section>
+    
+    <section class="main-section" id="The_style_Attribute">
+      <header>The style Attribute</header>
+      <p>The <code class="code-snippet">style</code> attribute is used to add styles to an element, such as color, font, size, and more.</p>
+      <h6>Example: </h6>
+      <code class="code-example">&lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;</code>
+    </section>
+    
+    <section class="main-section" id="The_lang_Attribute">
+      <header>The lang Attribute</header>
+      <p>You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+      <p>The following example specifies English as the language:</p>
+      <div class="pre-background">
+        <pre>
+          <code class="code-pre">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="main-section" id="The_title_Attribute">
+      <header>The title Attribute</header>
+      <p>The <code class="code-snippet">title</code> attribute defines some extra information about an element.</p>
+      <p>The value of the <code class="code-snippet">title</code> attribute will be displayed as a tooltip when you mouse over the element:</p>
+      <h6>Example:</h6>
+        <code class="code-example">&lt;p title="I'm a tooltip">This is a paragraph.&lt;/p&gt;
+        </code> 
+    </section>
+
+    <section class="main-section" id="We_Suggest:_Always_Use_Lowercase_Attributes">
+      <header>We Suggest: Always Use Lowercase Attributes</header>
+      <p>The HTML standard does not require lowercase attribute names.</p>
+      <p>The title attribute (and all other attributes) can be written with uppercase or lowercase like <strong>title</strong> or <em class="bold-normal-emphasis">TITLE</em>.</p>
+      <p>However, W3C <em class="bold-normal-emphasis">recommends</em> lowercase attributes in HTML, and <em class="bold-normal-emphasis">demands</em> lowercase attributes for stricter document types like XHTML.</p>
+      <p class="note">At W3Schools we always use lowercase attribute names.</p>
+    </section>
+
+    <section class="main-section" id="We_Suggest:_Always_Quote_Attribute_Values">
+    <header>We Suggest: Always Quote Attribute Values</header>
+    <p>The HTML standard does <em>not</em> require quotes around attribute values.</p>
+    <p>However, W3C <em class="bold-normal-emphasis">recommends</em> quotes in HTML, and <em class="bold-normal-emphasis">demands</em> quotes for stricter document types like XHTML.</p>
+    <h6>Good:</h6>
+    <code class="code-example">&lt;a href="https://www.w3schools.com/html/">Visit our HTML tutorial&lt;/a&gt;</code>
+    <h6>Bad:</h6>
+     <code class="code-example">&lt;a href=https://www.w3schools.com/html/>Visit our HTML tutorial&lt;/a&gt;</code>
+     <p>Sometimes you have to use quotes. This example will not display the title attribute correctly, because it contains a space:</p>
+     <h6>Example:</h6>
+     <code class="code-example">&lt;p title=About W3Schools&gt;</code>
+     <p class="note"> At W3Schools we always use quotes around attribute values.</p>
+    </section>
+
+    <section class="main-section" id="Single_or_Double_Quotes?">
+      <header>Single or Double Quotes?</header>
+      <p>Double quotes around attribute values are the most common in HTML, but single quotes can also be used.</p>
+      <p>In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:</p>
+      <code class="code-example">&lt;p title='John "ShotGun" Nelson'&gt;</code>
+      <p>Or vice versa:</p>
+      <code class="code-example">&lt;p title="John 'ShotGun' Nelson"&gt;</code>
+    </section>
+
+    <section class="main-section" id="Chapter_Summary">
+      <header>Chapter Summary</header>
+      <ul>
+        <li>All HTML elements can have <strong>attributes</strong></li>
+        <li>The <code class="code-snippet">href</code> attribute of <code class="code-snippet">&lt;a&gt;</code> specifies the URL of the page the link goes to</li>
+        <li>The <code class="code-snippet">src</code> attribute of <code class="code-snippet">&lt;img&gt;</code> specifies the path to the image to be displayed</li>
+        <li>The <code class="code-snippet">width</code> and <code class="code-snippet">height</code> attributes of <code class="code-snippet">&lt;img&gt;</code> provide size information for images</li>
+        <li>The <code class="code-snippet">alt</code> attribute of <code class="code-snippet">&lt;img&gt;</code> provides an alternate text for an image</li>
+        <li>The <code class="code-snippet">style</code> attribute is used to add styles to an element, such as color, font, size, and more</li>
+        <li>The <code class="code-snippet">lang</code> attribute of the <code class="code-snippet">&lt;html&gt;</code> tag declares the language of the Web page</li>
+        <li>The <code class="code-snippet">title</code> attribute defines some extra information about an element</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <p>All the content in this page was taken from the W3Schools HTML Course with the purpose of practicing my HTML and CSS skills.</p>
+      <p>If you enjoyed the content, there's more great content right <a href="https://www.w3schools.com/html/html_attributes.asp" id="w3schools" alt="W3Schools.com">here</a>.</p>
+    </section>
+  </main>
+</body>
+
+</html>
